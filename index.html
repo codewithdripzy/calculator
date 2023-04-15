@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" >
+    <title>Calculator</title>
+    <link rel="stylesheet" href="css/style.css">  
+</head>
+<body>
+    <div class="calc">
+        <div class="calc-1">
+            <input type="text" id="calcInput" value="0" onchange="monitorIo" disabled/>
+        </div>
+        <div class="calc-btn">
+            <div class="calc-2">
+                <button type="button" onclick="resetValue()" id="acbtn" class="new">AC</button>
+                <button type="button" onclick="negateValue()" class="new">+/-</button>
+                <button type="button" onclick="setPercentage()" class="btns new">%</button>
+                <button type="button" onclick="enterValue('/')" class="btns symbols">&divide;</button>
+                <button type="button" onclick="enterValue(7)" class="btns numbers">7</button>
+                <button type="button" onclick="enterValue(8)" class="btns numbers">8</button>
+                <button type="button" onclick="enterValue(9)" class="btns numbers">9</button>
+                <button type="button" onclick="enterValue('*')" class="btns symbols">&times;</button>
+                <button type="button" onclick="enterValue(4)" class="btns numbers">4</button>
+                <button type="button" onclick="enterValue(5)" class="btns numbers">5</button>
+                <button type="button" onclick="enterValue(6)" class="btns numbers">6</button>
+                <button type="button" onclick="enterValue('-')" class="btns symbols">-</button>
+                <button type="button" onclick="enterValue(1)" class="btns numbers">1</button>
+                <button type="button" onclick="enterValue(2)" class="btns numbers">2</button>
+                <button type="button" onclick="enterValue(3)" class="btns numbers">3</button>
+                <button type="button" onclick="enterValue('+')" class="btns symbols">+</button>
+                <!-- ending button -->
+                <button type="button" onclick="enterValue(0)" class="btns special">0</button>
+                <button type="button" onclick="enterValue('.')" class="btns numbers">.</button>
+                <button type="button" onclick="calculateValue()" class="symbols">=</button>
+            </div>
+        </div>
+     
+    </div>
+</body>
+<script src="js/main.js"></script>
+</html>

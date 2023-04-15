@@ -1,0 +1,131 @@
+@import url(fonts.css);
+
+*{
+    font-family: Helvetica;
+    font-weight: 100;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+}
+
+.calc{
+    position: fixed;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    width: 23%;
+    height: 100%;
+    left: 50%;
+    margin-left: -11.5%;
+}
+
+.calc-1{
+    padding: 0 15px;
+}
+
+.calc-1 input{
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 70px;
+    color: white;
+    padding: 100px 0px 20px; 
+    text-align: right;
+    width: 100%;
+}
+.calc-btn{
+       padding: 7px;
+}
+
+.calc-2{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+ 
+}
+.calc-2 button{
+    margin-top: 5px;
+    width: 70px;
+    height: 70px;
+    border-radius: 100px;
+    font-size: 30px;
+    border: none;    
+    transition: 0.3s cubic-bezier(0.01, 0.49, 0.35, 0.99) all;
+}
+
+.symbols:focus{
+    background-color: white;
+    color: orange;
+}
+.new:focus{
+    animation: blink 0.2s cubic-bezier(0.01, 0.49, 0.35, 0.99) 1;
+}
+
+@keyframes blink {
+    to{
+        background-color: #f1f1f1;
+    }
+}
+
+.numbers:focus, .special:focus{
+    animation: blinkNumbers 0.2s cubic-bezier(0.01, 0.49, 0.35, 0.99) 1;
+}
+
+@keyframes blinkNumbers {
+    to{
+        background-color: #ababab;
+    }
+}
+
+.new{
+    background-color: #bbb;
+}
+.symbols{
+    background-color: orange;
+    color: white;
+}
+.numbers{
+    background-color: #454545;
+    color: white;
+}
+
+.special{
+    background-color: #454545;
+    color: white;
+    width: 150px !important;
+    text-align: left;
+    padding-left: 30px;
+}
+
+@media screen and (max-width: 319px) {
+    .calc-2 button{
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .calc{
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        margin-left: 0%;
+    }
+    .calc-2{
+        gap: 7px !important;
+    }
+}
+
+@media screen and (min-width: 425px) and (max-width: 1024px){
+    .calc{
+        left: 50%;
+        margin-left: -170px;
+        width: 350px;
+    }
+}
